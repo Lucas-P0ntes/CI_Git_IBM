@@ -1,4 +1,4 @@
 job:
   script:
-  -echo "Oi"
-  -echo "Ibm"
+  - echo "Oi"
+  - echo "Ibm"
