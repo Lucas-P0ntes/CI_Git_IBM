@@ -1,4 +1,13 @@
-job:
+image: maven #hub.docker.com-> buscar uma imagem que vaiser rodada 
+stages: #Faz a execução em ordem /caso não tenha ele executa em caralelo
+- build
+- test
+build:
+  stage: build
   script:
-  - echo "Oi"
-  - echo "Ibm"
+  - mvm package -Dmaven.test.skip
+teste:
+  stage:teste
+  script:
+  - mvn test
+
