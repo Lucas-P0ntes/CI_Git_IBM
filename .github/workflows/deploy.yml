@@ -12,7 +12,7 @@ jobs:
 
   teste:
     runs-on: ubuntu-20.04 #maquina
-    needs: build
+    needs: builds
     steps: 
     - name: Roda um script shell
       run: echo "Olá git actions teste"
