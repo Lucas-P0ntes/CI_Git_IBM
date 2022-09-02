@@ -1,10 +1,17 @@
 name: CI_IBM
 
-on: [push]  
+on: [push] #ação 
 
 jobs:
   builds:
-    runs-on: ubuntu-20.04
-    steps:
+    runs-on: ubuntu-20.04 #maquina
+    steps: 
     - name: Roda um script shell
       run: echo "Olá git actions"
+
+  builds:
+    runs-on: ubuntu-20.04 #maquina
+    needs: build
+    steps: 
+    - name: Roda um script shell
+      run: echo "Olá git actions teste"
